@@ -20,7 +20,7 @@
 			<div class="col-xs-6 col-sm-4 text-right">
 				<div><?php _e('Theme by %s.', '<a href="http://tennsinn.com">息E-敛</a>'); ?></div>
 				<div><?php _e('Powered by %s.', '<a href="http://www.typecho.org">Typecho</a>'); ?></div>
-				<div>Copyright &copy; <?php echo date('Y'); ?><span class="hidden-xs"> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></span>.</div>
+				<div>Copyright &copy; <?php echo !empty($this->options->copyright) ? $this->options->copyright.' - '.date('Y') : date('Y'); ?><span class="hidden-xs"> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></span>.</div>
 			</div>
 		</div>
 	</div>

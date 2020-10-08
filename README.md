@@ -1,3 +1,3 @@
-# TePureBS
+# PureBS
 
 Typecho theme Pure (Bootstrap version)
