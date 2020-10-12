@@ -30,5 +30,34 @@
 		$copyright = new Typecho_Widget_Helper_Form_Element_Text('copyright', NULL, NULL, _t('Copyright起始年份'), _t('在这里填入页脚Copyright信息的起始年份（显示格式：<u>起始年份 - 当前年份</u>），留空则只显示当前年份'));
 		$copyright->addRule('isInteger', _t('请输入正确的数字年份信息。'));
 		$form->addInput($copyright);
+
+		$cc_note = new Typecho_Widget_Helper_Form_Element_Textarea(
+			'cc_note',
+			NULL,
+			'Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><span class="visible-lg-inline">Creative Commons Attribution-NonCommercial-ShareAlike 4.0</span><span class="hidden-lg">CC BY-NC-SA 4.0</span> International License</a>.',
+			_t('Creative Commons 文本声明'),
+			_t('在这里填入页脚Creative Commons信息的文本声明')
+		);
+		$form->addInput($cc_note);
+
+		$cc_image_url = new Typecho_Widget_Helper_Form_Element_Text(
+			'cc_image_url',
+			NULL,
+			'https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png',
+			_t('Creative Commons 图片地址'),
+			_t('在这里填入页脚Creative Commons License信息中的图片地址')
+		);
+		$cc_image_url->addRule('url', _t('请输入正确的图片链接'));
+		$form->addInput($cc_image_url);
+
+		$cc_image_link = new Typecho_Widget_Helper_Form_Element_Text(
+			'cc_image_link',
+			NULL,
+			'http://creativecommons.org/licenses/by-nc-sa/4.0/',
+			_t('Creative Commons 图片链接'),
+			_t('在这里填入页脚Creative Commons信息中图片的链接地址')
+		);
+		$cc_image_link->addRule('url', _t('请输入正确的链接地址'));
+		$form->addInput($cc_image_link);
 	}
 ?>
