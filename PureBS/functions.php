@@ -14,7 +14,7 @@
 				'showLatestComments' => _t('显示最近回复'), 
 				'showTagCloud' => _t('显示标签云'),
 				'showArchive' => _t('显示归档'),
-				'showLinks' => _t('显示友情链接（需Links插件支持）')
+				'showLinks' => _t('显示友情链接（需<a href="https://github.com/tennsinn/TeLinks">Links</a>插件支持）')
 			), 
 			array(
 				'showCategory', 
@@ -24,7 +24,7 @@
 		);
 		$form->addInput($sidebarBlock->multiMode());
 
-		$showClicks = new Typecho_Widget_Helper_Form_Element_Radio('showClicks', array(0 => _t('关闭'), 1 => _t('打开')), 0, _t('显示点击数（需Viewers插件支持）'));
+		$showClicks = new Typecho_Widget_Helper_Form_Element_Radio('showClicks', array(0 => _t('关闭'), 1 => _t('打开')), 0, _t('显示点击数（需<a href="https://github.com/tennsinn/TeViewers">Viewers</a>插件支持）'));
 		$form->addInput($showClicks);
 
 		$copyright = new Typecho_Widget_Helper_Form_Element_Text('copyright', NULL, NULL, _t('Copyright起始年份'), _t('在这里填入页脚Copyright信息的起始年份（显示格式：<u>起始年份 - 当前年份</u>），留空则只显示当前年份'));
