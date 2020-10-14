@@ -77,9 +77,9 @@
 		<section class="panel panel-default">
 			<div class="panel-heading"><?php _e('友情链接'); ?></div>
 			<div class="list-group">
-				<?php $links = Links_Plugin::getLinks('exchange',1); ?>
+				<?php $links = Links_Plugin::getLinks('exchange'); ?>
 				<?php foreach($links as $link) : ?>
-					<a href="<?=$link['url']?>" title="<?=$link['description']?>" target="_blank" class="list-group-item"><?=$link['title']?></a>
+					<a href="<?=$link['url']?>" title="<?=$link['description']?>" target="_blank" class="list-group-item"><?=$link['title'].($link['valid'] ? '' : '<small>（失效）</small>')?></a>
 				<?php endforeach; ?>
 			</div>
 		</section>
