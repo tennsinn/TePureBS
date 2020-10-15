@@ -4,7 +4,7 @@
  * 
  * @package PureBS
  * @author 息E-敛
- * @version 1.0.5
+ * @version 1.0.6
  * @link http://tennsinn.com
  */
 
