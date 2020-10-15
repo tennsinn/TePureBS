@@ -66,6 +66,17 @@ p:last-child {
 	color: #FFF;
 }
 
+.post-info-item {
+	display: table-cell;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+.post-info-detail {
+	display: table-cell;
+	vertical-align: top;
+}
+
 .post-content p {
 	text-indent: 2em;
 }
