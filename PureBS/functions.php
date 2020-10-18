@@ -24,6 +24,15 @@
 		);
 		$form->addInput($sidebarBlock->multiMode());
 
+		$links_num_group =  new Typecho_Widget_Helper_Form_Element_Select(
+			'links_num_group',
+			array('administrator' => _t('管理员'), 'editor' => _t('编辑'), 'contributor' => _t('贡献者'), 'subscriber' => _t('关注者'), 'visitor' => _t('游客')),
+			'administrator',
+			_t('友情链接点击数允许显示用户组'),
+			_t('选择此级别以上的用户将会在侧边栏友情链接部分显示点击数')
+		);
+		$form->addInput($links_num_group);
+
 		$showClicks = new Typecho_Widget_Helper_Form_Element_Radio('showClicks', array(0 => _t('关闭'), 1 => _t('打开')), 0, _t('显示点击数（需<a href="https://github.com/tennsinn/TeViewers">Viewers</a>插件支持）'));
 		$form->addInput($showClicks);
 

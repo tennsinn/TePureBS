@@ -79,7 +79,9 @@
 			<div class="list-group">
 				<?php $links = Links_Plugin::getLinks('exchange'); ?>
 				<?php foreach($links as $link) : ?>
-					<a href="<?php $this->options->index('/action/links?do=click&lid='.$link['lid']); ?>" title="<?=$link['description']?>" target="_blank" class="list-group-item"><?=$link['title'].($link['valid'] ? '' : '<small>（失效）</small>')?></a>
+					<a href="<?php $this->options->index('/action/links?do=click&lid='.$link['lid']); ?>" title="<?=$link['description']?>" target="_blank" class="list-group-item"><?=$link['title'].($link['valid'] ? '' : '<small>（失效）</small>')?>
+					<?php if('visitor' == $this->options->links_num_group || $this->user->pass($this->options->links_num_group, true)) : ?><span class="badge"><?=$link['clicksNum']?><?php endif; ?></span>
+					</a>
 				<?php endforeach; ?>
 			</div>
 		</section>
