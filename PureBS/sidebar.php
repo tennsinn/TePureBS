@@ -79,7 +79,7 @@
 			<div class="list-group">
 				<?php $links = Links_Plugin::getLinks('exchange'); ?>
 				<?php foreach($links as $link) : ?>
-					<a href="<?=$link['url']?>" title="<?=$link['description']?>" target="_blank" class="list-group-item"><?=$link['title'].($link['valid'] ? '' : '<small>（失效）</small>')?></a>
+					<a href="<?php $this->options->index('/action/links?do=click&lid='.$link['lid']); ?>" title="<?=$link['description']?>" target="_blank" class="list-group-item"><?=$link['title'].($link['valid'] ? '' : '<small>（失效）</small>')?></a>
 				<?php endforeach; ?>
 			</div>
 		</section>
